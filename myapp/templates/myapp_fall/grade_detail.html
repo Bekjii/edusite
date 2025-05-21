@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{ subject.name }} — {{ grade.number }} сынып{% endblock %}
+{% block content %}
+  <h2 class="mb-4">{{ subject.name }} — {{ grade.number }} сынып</h2>
+  <div class="row">
+    {% for topic in topics %}
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm border-info">
+          <div class="card-body">
+            <h5 class="card-title">{{ topic.title }}</h5>
+            <a href="{% url 'topic_detail' topic.id %}" class="btn btn-outline-info">Материалдар</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

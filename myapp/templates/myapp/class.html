@@ -1,0 +1,1 @@
+<h1>Topics for Grade {{ grade.number }}</h1>{% for topic in topics %}<a href='{% url 'topic_detail' topic.id %}'>{{ topic.title }}</a><br>{% endfor %}

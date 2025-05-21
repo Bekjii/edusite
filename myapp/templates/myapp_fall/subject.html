@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{ subject.name }}{% endblock %}
+{% block content %}
+  <h2 class="mb-4">{{ subject.name }} — Сыныпты таңдаңыз</h2>
+  <div class="grade-list">
+    {% for grade in grades %}
+      <a href="{% url 'grade_detail' subject.id grade.id %}" class="btn btn-outline-primary mb-3 w-100">
+        {{ grade.number }} сынып
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

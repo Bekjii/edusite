@@ -1,1 +1,1 @@
-web: gunicorn mysite.wsgi
+git commit -m "Добавлен Procfile"web: gunicorn mysite.wsgi
